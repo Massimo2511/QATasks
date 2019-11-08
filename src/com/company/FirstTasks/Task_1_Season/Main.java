@@ -1,4 +1,6 @@
-package com.company.FirstTasks;
+package com.company.FirstTasks.Task_1_Season;
+
+import com.company.FirstTasks.Task_1_Season.Season;
 
 import java.util.Scanner;
 
@@ -11,19 +13,18 @@ public class Main {
 
 
         System.out.println("Task 1 'SEASON'");
-        System.out.println("Enter the name of the season that start from capital letter");
+        System.out.println("Enter the name of the season that starts from  small letter");
 
 
         Scanner keyboard = new Scanner(System.in);
-        String width = keyboard.next();
+        String season_name = keyboard.next();
 
         System.out.println("You have entered season: ");
-        System.out.println(width);
+        System.out.println(season_name);
 
-        Counter ss = new Counter();
-        ss.season(width);
+        Season ss = new Season();
+        ss.season(season_name);
 
 
-	// write your code here
     }
 }

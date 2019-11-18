@@ -20,7 +20,9 @@ public class RevertArray {
 
     public static void main(String[] args) {
 
-        /* 2. Написать метод, который переворачивает массив*/
+        /* Task: 2. Написать метод, который переворачивает массив*/
+
+
         Scanner arraysize = new Scanner(System.in);
         Scanner array_elements = new Scanner(System.in);
 

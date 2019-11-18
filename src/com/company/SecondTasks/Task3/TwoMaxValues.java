@@ -34,7 +34,10 @@ public class TwoMaxValues {
 
     public static void main(String[] args) {
 
-        /* 2. Написать метод, который переворачивает массив*/
+        /* Task:3. Написать метод, который принимает в себя массив int*ов,
+        находит 2 максимальных значения и возвращает их как массив из 2-x int*ов.*/
+
+
         Scanner arraysize = new Scanner(System.in);
         Scanner array_elements = new Scanner(System.in);
 

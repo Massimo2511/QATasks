@@ -4,48 +4,40 @@ import java.util.Scanner;
 
 public class RevertArray {
 
-    static int revert_Array(int array[]) {
+   public static void revert_Array(int [] array) {
 
-        System.out.println();
-        System.out.println("Reverted array is : ");
-        for (int i = array.length - 1; i >= 0; i--) {
-            System.out.print(array[i] + " ");
-
-
-        }
-
-        return array[array.length - 1];
-    }
-
-
+       int[] reversed = new int[array.length];
+       for (int i = 0; i < array.length; i++) {
+           reversed[i] = array[array.length - 1 - i];
+       }
+       System.arraycopy(reversed, 0, array, 0, array.length);
+   }
     public static void main(String[] args) {
 
         /* Task: 2. Написать метод, который переворачивает массив*/
 
-
-        Scanner arraysize = new Scanner(System.in);
-        Scanner array_elements = new Scanner(System.in);
-
+        Scanner arraySize = new Scanner(System.in);
+        Scanner arrayElements = new Scanner(System.in);
 
         System.out.println("Enter the length of arrays: ");
 
-        int array_length = arraysize.nextInt();
-        int[] my_array = new int[array_length];
-
+        int arrayLength = arraySize.nextInt();
+        int[] myArray = new int[arrayLength];
 
         System.out.println("Enter elements of  your array: ");
-        for (int i = 0; i <= array_length - 1; i++) {
-            my_array[i] = array_elements.nextInt();
+        for (int i = 0; i <= arrayLength - 1; i++) {
+            myArray[i] = arrayElements.nextInt();
         }
-
-
         System.out.println("Entered array is : ");
-        for (int i = 0; i <= my_array.length - 1; i++) {
-            System.out.print(my_array[i] + " ");
-
+        for (int i = 0; i <= myArray.length - 1; i++) {
+            System.out.print(myArray[i] + " ");
         }
 
-        revert_Array(my_array);
+        revert_Array(myArray);
 
+        System.out.println("Reverted array : ");
+        for (int i = 0; i <= myArray.length - 1; i++) {
+            System.out.print(myArray[i] + " ");
+        }
     }
 }

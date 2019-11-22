@@ -1,7 +1,5 @@
 package com.company.SecondTasks.Task3;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
-
 import java.util.Scanner;
 
 public class TwoMaxValues {
@@ -22,9 +20,8 @@ public class TwoMaxValues {
             }
         }
         System.out.println();
-        System.out.println("Maximum First Element is : " + maxValue1);
-        System.out.println("Maximum Second Element is : " + maxValue2);
-        return array;
+
+return new int[]{maxValue1, maxValue2};
     }
     public static void main(String[] args) {
 
@@ -46,6 +43,11 @@ public class TwoMaxValues {
         for (int i = 0; i <= myArray.length - 1; i++) {
             System.out.print(myArray[i] + " ");
         }
-        max_array_values(myArray);
+        int[] resultArray=max_array_values(myArray);
+
+        System.out.println("Returned array is : ");
+        for (int i = 0; i < resultArray.length; i++) {
+            System.out.print(resultArray[i] + " ");
+        }
     }
 }

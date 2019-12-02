@@ -1,14 +1,12 @@
-package com.company.SecondTasks.Task5;
-
-
+package com.company.Tests;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class RepeatingValue {
+public class Test {
     static int valueDefiner(int array[]) {
-
-        Arrays.sort(array);
         int result = 0;
         int count = 1, checkCount;
         int popular = array[0];
@@ -23,13 +21,13 @@ public class RepeatingValue {
                     if (checkCount > count) {
                         popular = check;
                         count = checkCount;
-                        result = checkCount;
-                    }
-                    if (checkCount == count) {
-                        count = checkCount;
-                        result = checkCount;
+                        result = checkCount+1;
                     }
 
+                    if (checkCount == count) {
+                        count = checkCount;
+                        result = checkCount+1;
+                    }
                 }
             }
         }
@@ -38,9 +36,6 @@ public class RepeatingValue {
         return popular;
     }
     public static void main(String[] args) {
-        /* Task: 5. Написать метод, который принимает в себя массив int*ов
-         и выводит в консоль счётчик и значение элемента,
-          который повторяется больше всего раз*/
 
         Scanner arraySize = new Scanner(System.in);
         Scanner arrayElements = new Scanner(System.in);
@@ -59,7 +54,7 @@ public class RepeatingValue {
             System.out.print(myArray[i] + " ");
         }
         System.out.println();
-
         valueDefiner(myArray);
     }
+
 }

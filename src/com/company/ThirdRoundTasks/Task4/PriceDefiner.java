@@ -7,13 +7,13 @@ public class PriceDefiner {
 
         public static double doubleValue_detector(String sentence) {
 
-            Matcher m = Pattern.compile("(?!=\\d\\.\\d\\.)([\\d.]+)").matcher(sentence);
+            Matcher matcher = Pattern.compile("(?!=\\d\\.\\d\\.)([\\d.]+)").matcher(sentence);
             double resultValue = 0;
             int counter=0;
-            while (m.find()) {
+            while (matcher.find()) {
                 counter++;
                 if(counter>1&&counter<counter+1) {
-                    resultValue = Double.parseDouble(m.group(1));
+                    resultValue = Double.parseDouble(matcher.group(1));
                 }
             }
             return resultValue;

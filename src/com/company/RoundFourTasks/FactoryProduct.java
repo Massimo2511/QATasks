@@ -19,29 +19,33 @@ public class FactoryProduct extends Product {
 
 
     /*public double costPrice(String materialType1, int materialQuantity1, String materialType2, int materialQuantity2, int humanHours)*/
-    public static double costPrice(FactoryProduct chairMaterial1) {
+    public static double costPrice(FactoryProduct product) {
 
-        System.out.println("First material is :" + chairMaterial1.materialType1);
-        System.out.println("Second material is :" + chairMaterial1.materialType2);
+        System.out.println("First material is : " + product.materialType1);
+        System.out.println("Second material is : " + product.materialType2);
 
         double pricePerItemOfMaterial1 = 5;
         double pricePerItemOfMaterial2 = 10;
 
         double pricePerHourOfManHours = 100;
 
-        double costPrice = (chairMaterial1.materialQuantity1 * pricePerItemOfMaterial1) + (chairMaterial1.materialQuantity2 * pricePerItemOfMaterial2) + (pricePerHourOfManHours * chairMaterial1.manHours);
-        System.out.println("Cost price of current product is " + costPrice);
+        double costPrice = (product.materialQuantity1 * pricePerItemOfMaterial1) + (product.materialQuantity2 * pricePerItemOfMaterial2) + (pricePerHourOfManHours * product.manHours);
+        System.out.println("Cost price of current product is : " + costPrice);
         System.out.println("*********************************************");
+
         return costPrice;
+
     }
 
 
-    public static void priceForSale(double salePrice) {
+    public static double priceForSale(double salePrice) {
 
         salePrice = salePrice + (salePrice * 0.2);
 
         System.out.println("Sale price of the product is : " + salePrice);
         System.out.println("*********************************************");
+
+        return salePrice;
     }
 
 
@@ -71,7 +75,7 @@ public class FactoryProduct extends Product {
 
 
     /*public static void deliveryPrice(double weight, double length, double width, double height)*/
-    public static void deliveryPrice(FactoryProduct chairSize) {
+    public static double deliveryPrice(FactoryProduct chairSize) {
 
         double perKilogram = 1;
         double perCentimeterLength = 2;
@@ -79,7 +83,10 @@ public class FactoryProduct extends Product {
         double perCentimeterHeight = 4;
         double priceOfDelivery = (chairSize.weight * perKilogram) + (chairSize.length * perCentimeterLength) + (chairSize.width * perCentimeterWidth) + (chairSize.height * perCentimeterHeight);
         System.out.println("Delivery price is : " + priceOfDelivery);
-        System.out.println("*********************************************");
+        /*System.out.println("*********************************************");*/
+        System.out.println();
+        System.out.println();
+        return priceOfDelivery;
     }
 
 }

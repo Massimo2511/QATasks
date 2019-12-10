@@ -16,20 +16,10 @@ public class Manager extends FactoryProduct {
     }
 
     public static void main(String[] args) {
+       System.out.println();
 
-
-        Manager chairMaterial1 = new Manager("Wood", 10, "Metal", 20, 10);
-        Manager chairTimeToDo = new Manager(10, 5);
-        Manager chairSize = new Manager(25, 200, 300, 300);
-
-       double priceOfMadeItem= costPrice(chairMaterial1);
-
-        priceForSale(priceOfMadeItem);
-
-        manufactureTime(chairTimeToDo);
-
-        deliveryPrice(chairSize);
-
-
+       Chairs.result();
+       Wodrobes.result();
+       Sofas.result();
     }
 }
